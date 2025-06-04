@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+</head>
+<body>
+    <header>
+        <div class="mercado">
+            <img src="img/logo.png" alt="Logo do MiniMercado" class="mercado-logo" width="20px" height="20px">
+            <div class="mercado-nome">
+                <p class="mercado-pri-nome">MiniMercado</p>
+                <p class="mercado-seg-nome">Preço Baixo</p>
+            </div>
+        </div>
+        <div class="pesquisar-produto">
+            <input type="search" class="pesquisa" name="pesquisa" list="opcoes-produtos" placeholder="Buscar produtos...">
+            <datalist id="opcoes-produtos">
+                <option value="Água Sanitária Super Candida 5lt">
+                <option value="Arroz Tipo 01 Tio João 2kg">
+                <option value="Banana Prata Del Norte 1kg">
+                <option value="Batata Inglesa Comum 1Kg">
+                <option value="Feijão Carioca Camil 1Kg">
+                <option value="Papel Higiênico Folha Dupla 30m Leve 16 Pague 15 Mimmo">
+            </datalist>
+        </div>
+        <nav>
+            <a href="index.html#corpo">Produtos</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="#rodape">Mais</a>
+            <a href="carrinho.html"><img src="img/carrinho.png" alt="Carrinho de compras" width="20px" height="20px"></a>
+            <a href="login.html"><img src="img/entrar-avatar.png" alt="Login" width="20px" height="20px"></a>
+        </nav>
+    </header>
+    <main>
+        <h2>Carrinho de Compras</h2>
+
+        <section class="carrinho-itens" aria-label="Itens no carrinho">
+            <div class="carrinho-cabecalho carrinho-linha">
+                <span class="cabecalho-item">Item</span>
+                <span class="cabecalho-preco">Preço</span>
+                <span class="cabecalho-quantidade">Quantidade</span>
+                <span class="cabecalho-acoes">Ações</span>
+            </div>
+
+            
+            <div class="carrinho-item carrinho-linha" data-produto-id="1">
+                <span class="item-nome">Água Sanitária Super Candida 5lt</span>
+                <span class="item-preco">R$ 9,99</span>
+                <input 
+                    type="number" 
+                    class="item-quantidade" 
+                    name="quantidade" 
+                    value="1" 
+                    min="1" 
+                    aria-label="Quantidade de Água Sanitária"
+                />
+                <button class="remover-item" aria-label="Remover Água Sanitária do carrinho">Remover</button>
+            </div>
+
+            
+        </section>
+
+        <hr>
+
+        <section class="carrinho-total" aria-label="Resumo do pedido">
+            <p><strong>Total:</strong> <span id="valor-total">R$ 9,99</span></p>
+            <button type="submit" class="finalizar-compra">Finalizar Compra</button>
+        </section>
+    </main>
+
+
+    
+</body>
+</html> 

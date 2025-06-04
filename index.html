@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimercado Preço Baixo</title>
+    <link rel="shortcut icon" href="img/logo.png">
+    
+
+</head>
+
+<body>
+    <header>
+        <div class="mercado">
+            <img src="img/logo.png" alt="Logo do MiniMercado" class="mercado-logo" width="20px" height="20px">
+            <div class="mercado-nome">
+                <p class="mercado-pri-nome">MiniMercado</p>
+                <p class="mercado-seg-nome">Preço Baixo</p>
+            </div>
+        </div>
+        <div class="pesquisar-produto">
+            <input type="search" class="pesquisa" name="pesquisa" list="opcoes-produtos" placeholder="Buscar produtos...">
+            <datalist id="opcoes-produtos">
+                <option value="Água Sanitária Super Candida 5lt">
+                <option value="Arroz Tipo 01 Tio João 2kg">
+                <option value="Banana Prata Del Norte 1kg">
+                <option value="Batata Inglesa Comum 1Kg">
+                <option value="Feijão Carioca Camil 1Kg">
+                <option value="Papel Higiênico Folha Dupla 30m Leve 16 Pague 15 Mimmo">
+            </datalist>
+        </div>
+        <nav>
+            <a href="index.html#corpo">Produtos</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="#rodape">Mais</a>
+            <a href="carrinho.html"><img src="img/carrinho.png" alt="Carrinho de compras" width="20px" height="20px"></a>
+            <a href="login.html"><img src="img/entrar-avatar.png" alt="Login" width="20px" height="20px"></a>
+        </nav>
+    </header>
+    <main id="corpo">
+        <section>
+            <h3 class="categoria">Frutas e Verduras</h3>
+            <div class="produtos">
+                <article class="produto">
+                    <img src="img/banana.png" alt="Banana Prata Del Norte">
+                    <p>Banana Prata Del Norte 1kg</p>
+                    <h3 class="produto-valor">R$ 5,99</h3>
+                    <div class="produto-qtd">
+                        <button type="button" class="btn-menos">-</button>
+                        <input type="number" min="1" value="1" readonly>
+                        <button type="button" class="btn-mais">+</button>
+                    </div>
+                    <button class="produto-add" type="button">Adicionar ao carrinho</button>
+                </article>
+
+                <article class="produto">
+                    <img src="img/batata_inglesa.png" alt="Batata Inglesa Comum">
+                    <p>Batata Inglesa Comum 1Kg</p>
+                    <h3 class="produto-valor">R$ 4,99</h3>
+                    <div class="produto-qtd">
+                        <button type="button" class="btn-menos">-</button>
+                        <input type="number" min="1" value="1" readonly>
+                        <button type="button" class="btn-mais">+</button>
+                    </div>
+                    <button class="produto-add" type="button">Adicionar ao carrinho</button>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="categoria">Alimentos Não Perecíveis</h3>
+            <div class="produtos">
+                <article class="produto">
+                    <img src="img/arroz_tipo1_tio_joao.png" alt="Arroz Tipo 01 Tio João 2kg">
+                    <p>Arroz Tipo 01 Tio João 2kg</p>
+                    <h3 class="produto-valor">R$ 11,99</h3>
+                    <div class="produto-qtd">
+                        <button type="button" class="btn-menos">-</button>
+                        <input type="number" min="1" value="1" readonly>
+                        <button type="button" class="btn-mais">+</button>
+                    </div>
+                    <button class="produto-add" type="button">Adicionar ao carrinho</button>
+                </article>
+
+                <article class="produto">
+                    <img src="img/feijao_carioca_camil.png" alt="Feijão Carioca Camil 1Kg">
+                    <p>Feijão Carioca Camil 1Kg</p>
+                    <h3 class="produto-valor">R$ 5,97</h3>
+                    <div class="produto-qtd">
+                        <button type="button" class="btn-menos">-</button>
+                        <input type="number" min="1" value="1" readonly>
+                        <button type="button" class="btn-mais">+</button>
+                    </div>
+                    <button class="produto-add" type="button">Adicionar ao carrinho</button>
+                </article>
+
+            </div>
+        </section>
+
+        <section>
+
+            <h3 class="categoria">Higiene e Limpeza</h3>
+            <div class="produtos">
+                <article class="produto">
+                    <img src="img/agua_sanitaria_candida.png" alt="Água Sanitária Super Candida 5lt">
+                    <p>Água Sanitária Super Candida 5lt</p>
+                    <h3 class="produto-valor">R$ 11,99</h3>
+                    <div class="produto-qtd">
+                        <button type="button" class="btn-menos">-</button>
+                        <input type="number" min="1" value="1" readonly>
+                        <button type="button" class="btn-mais">+</button>
+                    </div>
+                    <button class="produto-add" type="button">Adicionar ao carrinho</button>
+                </article>
+
+                <article class="produto">
+                    <img src="img/papel_higienico_mimmo.png"
+                        alt="Papel Higiênico Folha Dupla 30m Leve 16 Pague 15 Mimmo">
+                    <p>Papel Higiênico Folha Dupla 30m Leve 16 Pague 15 Mimmo</p>
+                    <h3 class="produto-valor">R$ 26,49</h3>
+                    <div class="produto-qtd">
+                        <button type="button" class="btn-menos">-</button>
+                        <input type="number" min="1" value="1" readonly>
+                        <button type="button" class="btn-mais">+</button>
+                    </div>
+                    <button class="produto-add" type="button">Adicionar ao carrinho</button>
+                </article>
+
+            </div>
+        </section>
+
+        <article>
+            <h2>Serviços Oferecidos</h2>
+            <span>Retiarada no local</span>
+            <br>
+            <span>Tele-entrega</span>
+            
+        </article>
+    </main>
+    <hr>
+
+    <footer id="rodape">
+        <div>
+            <h3>Autoria</h3>
+            <p>Desenvolvido por Marcelo Bernardo de Miranda</p>
+            <p>&copy; 2025 MiniMercado Preço Baixo</p>
+        </div>
+        <div>
+            <h3>Páginas</h3>
+            <a href="index.html">Produtos</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="login.html">Login</a>
+        </div>
+        <address>
+            <h3>Dados de Contato</h3>
+            <a href="tel:0800 987 4721">0800 987 4721</a>
+            <a href="mailto:bomprec@marcelo.com.br?subjetc='Faça seu pedido'">bomprec@bompreco.com.br</a>
+        </address>
+    </footer>
+
+</body>
+
+</html>
