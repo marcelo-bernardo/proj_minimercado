@@ -1,11 +1,12 @@
 # MiniMercado Preço Baixo
 
-Este é um projeto de site para um minimercado fictício chamado MiniMercado Preço Baixo. O site simula funcionalidades de um e-commerce básico com páginas.
+Este é um projeto de site para um minimercado fictício chamado MiniMercado Preço Baixo. O site simula funcionalidades de um e-commerce básico com páginas. As pagina estão estilizadas com boostrap
 
 ## 🌐 Páginas do Projeto
 
 ### `index.html` 'Página principal do projeto'
 Temos o cabeçãlho a qual contém os links de navegação, direcionado a cada página.
+Foi implementando um carrosel do bootstrap
 Página principal com listagem de produtos organizados por categoria:
 - Frutas e Verduras
 - Alimentos Não Perecíveis
@@ -32,8 +33,7 @@ Página do carrinho de compras:
 > Página ainda em construção. A página ainda não está pronta, pois somente na segunda fase há a implementação de formularios, a ideia é, usar formulario para realizar essa parte.
 
 ### `login.html`
-Essa página não está pronta, em comentario, pois a construção segue a parte do formulário para a segunda fase.
-o comnetario indica Página de autenticação de usuário(uma ideia do que conterá):
+A pagina de login possui os campos:
 - Campos para "Usuário" e "Senha"
 - Botão de login
 - Link para criar nova conta
@@ -47,10 +47,21 @@ Apresentação institucional do mercado:
 
 ## 🎨 Estilo
 
-Ainda não possuem, somente a estrutura html dividido em:
-- Cabeçalho
-- Corpo da página de login
-- Rodapé
+O site do MiniMercado foi planejado com foco em visual limpo, acessível e moderno, aproveitando os recursos do Bootstrap 5. Abaixo está um resumo de como o estilo foi aplicado:
+
+Framework Utilizado
+Bootstrap 5.3.6
+- Usado em todas as páginas.
+- Carrossel
+- Responsividade automática (se adapta a celular, tablet e desktop).
+- Layout com container, row, col e grid system.
+- Componentes prontos: botões, formulários, carrossel, navbar, badges, etc.
+
+#Interatividade com JavaScript
+Botões de + e – ajustam a quantidade dos produtos.
+Carrossel com transição suave (carousel-dark, data-bs-ride).
+
+
 
 ## 🧑‍💻 Autor
 
@@ -64,3 +75,5 @@ Desenvolvido por **Marcelo Bernardo de Miranda**
 ---
 
 &copy; 2025 MiniMercado Preço Baixo
+
+Foi implementando o recurso alt como forma de acenssibilidae

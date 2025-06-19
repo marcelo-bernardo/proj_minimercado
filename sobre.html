@@ -1,91 +1,181 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre o supermecado </title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre o supermercado</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous" />
+        <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
-<body>
-    <header>
-        <div class="mercado">
-            <img src="img/logo.png" alt="Logo do MiniMercado" class="mercado-logo" width="20px" height="20px">
-            <div class="mercado-nome">
-                <p class="mercado-pri-nome">MiniMercado</p>
-                <p class="mercado-seg-nome">Preço Baixo</p>
+
+<body class="bg-warning-subtle">
+    <header class="bg-success border-bottom shadow-sm">
+        <div class="container py-2 d-flex align-items-center justify-content-between flex-wrap">
+            <a href="index.html" class="d-flex align-items-center text-decoration-none">
+                <img src="assets/img/logo.png" alt="Logo do MiniMercado" class="img-fluid me-2" style="max-height: 50px;">
+                <h1 class="fs-5 fw-bold text-white mb-0">Preço Baixo</h1>
+            </a>
+    
+            <form class="d-none d-md-flex flex-grow-1 mx-4" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar produtos..."
+                    aria-label="Buscar produtos">
+                <button class="btn btn-light" type="submit">Buscar</button>
+            </form>
+    
+            <div class="d-flex align-items-center gap-3 mt-2 mt-md-0">
+                <a href="carrinho.html" class="btn btn-outline-light position-relative d-flex align-items-center">
+                    <img src="assets/img/carrinho.png" alt="Ícone de carrinho de compras" width="20" height="20"> <span
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        2
+                    </span>
+                </a>
+    
+                <a href="login.html" class="btn btn-outline-light d-flex align-items-center">
+                    <img src="assets/img/entrar-avatar.png" alt="Ícone de perfil de usuário para login" width="20" height="20">
+                </a>
             </div>
         </div>
-        <div class="pesquisar-produto">
-            <input type="search" class="pesquisa" name="pesquisa" list="opcoes-produtos" placeholder="Buscar produtos...">
-            <datalist id="opcoes-produtos">
-                <option value="Água Sanitária Super Candida 5lt">
-                <option value="Arroz Tipo 01 Tio João 2kg">
-                <option value="Banana Prata Del Norte 1kg">
-                <option value="Batata Inglesa Comum 1Kg">
-                <option value="Feijão Carioca Camil 1Kg">
-                <option value="Papel Higiênico Folha Dupla 30m Leve 16 Pague 15 Mimmo">
-            </datalist>
-        </div>
-        <nav>
-            <a href="index.html#corpo">Produtos</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="#rodape">Mais</a>
-            <a href="carrinho.html"><img src="img/carrinho.png" alt="Carrinho de compras" width="20px" height="20px"></a>
-            <a href="login.html"><img src="img/entrar-avatar.png" alt="Login" width="20px" height="20px"></a>
+    
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html#produtos-destaque" onclick="ativar(this)">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre.html" onclick="ativar(this)">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#servicos" onclick="ativar(this)">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contatos" onclick="ativar(this)">Contatos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
-    <main>
-        <header>
-            <h1>
-                <img src="img/carrinho.png" alt="Carrinho de compras" width="20" height="20">
-                Sobre Nós - Minimercado Preço Baixo
-                <img src="img/carrinho.png" alt="Carrinho de compras" width="20" height="20">
-            </h1>
-        </header>
 
-        <section aria-labelledby="quem-somos">
-            <h2 id="quem-somos">Quem Somos</h2>
-            <p>O <strong>Minimercado Preço Baixo</strong> é mais do que um ponto de compras — somos parceiros do dia a dia da nossa comunidade.</p>
-            <p>Desde 2025, atuamos com dedicação e compromisso, oferecendo produtos de qualidade, preços acessíveis e um atendimento acolhedor.</p>
-            <p>Com sede em <strong>Araucária - PR</strong>, somos o mercadinho de confiança das famílias que prezam por economia sem abrir mão da excelência.</p>
+    <!-- Conteúdo principal -->
+    <main class="container my-5">
+        <h2 class="text-center mb-4">
+            <img src="assets/img/carrinho.png" width="24" /> Sobre Nós - Minimercado Preço Baixo
+            <img src="assets/img/carrinho.png" width="24" />
+        </h2>
+
+        <section class="mb-5">
+            <h3>Quem Somos</h3>
+            <p class="lead">O <strong>Minimercado Preço Baixo</strong> é mais do que um ponto de compras — somos
+                parceiros
+                do dia a dia da nossa comunidade. Desde 2025, atuamos com dedicação e compromisso, oferecendo produtos
+                de
+                qualidade, preços acessíveis e um atendimento acolhedor. Com sede em <strong>Araucária - PR</strong>,
+                somos o
+                mercadinho de confiança das famílias que prezam por economia sem abrir mão da excelência.</p>
         </section>
 
-        <section class="video" aria-labelledby="video-apresentacao">
-            <h2 id="video-apresentacao">Conheça um Pouco Mais</h2>
-            <video src="img/mini.mp4" title="Vídeo institucional do Minimercado Preço Baixo" controls>
-                Seu navegador não suporta a exibição de vídeos.
-            </video>
+        <section class="mb-5">
+            <h3>Conheça um Pouco Mais</h3>
+            <div class="ratio ratio-16x9">
+                <video src="assets/img/mini.mp4" title="Vídeo institucional do Minimercado Preço Baixo" controls>
+                    Seu navegador não suporta a exibição de vídeos.
+                </video>
+            </div>
         </section>
 
-        <section aria-labelledby="nossa-identidade">
-            <h2 id="nossa-identidade">Nossa Identidade</h2>
+        <section class="mb-5">
+            <h3>Nossa Identidade</h3>
 
-            <article id="missao">
-                <h3>Missão</h3>
-                <img src="img/missao.png" alt="Ícone representando a missão" width="40" height="40">
-                <p>Oferecer produtos de qualidade com preços acessíveis, promovendo praticidade e economia no dia a dia de nossos clientes.</p>
-            </article>
-
-            <article id="visao">
-                <h3>Visão</h3>
-                <img src="img/visao.png" alt="Ícone representando a visão" width="40" height="40">
-                <p>Ser o minimercado de referência no bairro, reconhecido pela confiança, atendimento e vínculo com a comunidade.</p>
-            </article>
-
-            <article id="valores">
-                <h3>Valores</h3>
-                 <img src="img/valor.png" alt="Ícone representando os valores" width="40" height="40">
-                <ul>
-                    <li>Honestidade em cada venda</li>
-                    <li>Atendimento com respeito e atenção</li>
-                    <li>Comprometimento com o cliente</li>
-                    <li>Preço justo sempre</li>
-                    <li>Valorização da comunidade local</li>
-                </ul>
-            </article>
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <img src="assets/img/missao.png" width="40" class="mb-2" />
+                            <h5 class="card-title">Missão</h5>
+                            <p class="card-text">Oferecer produtos de qualidade com preços acessíveis, promovendo
+                                praticidade e
+                                economia no dia a dia de nossos clientes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <img src="assets/img/visao.png" width="40" class="mb-2" />
+                            <h5 class="card-title">Visão</h5>
+                            <p class="card-text">Ser o minimercado de referência no bairro, reconhecido pela confiança,
+                                atendimento e
+                                vínculo com a comunidade.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <img src="assets/img/valor.png" width="40" class="mb-2" />
+                            <h5 class="card-title">Valores</h5>
+                            <ul class="list-unstyled">
+                                <li>✔ Honestidade em cada venda</li>
+                                <li>✔ Atendimento com respeito e atenção</li>
+                                <li>✔ Comprometimento com o cliente</li>
+                                <li>✔ Preço justo sempre</li>
+                                <li>✔ Valorização da comunidade local</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
+    <!-- Rodapé -->
+    <hr class="my-4">
+    <footer id="contatos" class="container-fluid p-5 my-3 text-center bg-success" role="contentinfo">
+        <div class="row">
+            <div class="col-md-4 mb-3 text-white">
+                <h3>Autoria</h3>
+                <p>Desenvolvido por Marcelo Bernardo de Miranda</p>
+                <p>&copy; 2025 MiniMercado Preço Baixo</p>
+            </div>
+            <div class="col-md-4 mb-3 text-white">
+                <h3>Páginas</h3>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html#produtos-destaque">Produtos</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-white" href="sobre.html">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="login.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-3 text-white">
+                <h3>Dados de Contato</h3>
+                <address>
+                    <p><a class="text-white" href="tel:08009874721">0800 987 4721</a></p>
+                    <p><a class="text-white"
+                            href="mailto:bomprec@bompreco.com.br?subject=Faça%20seu%20pedido">bomprec@bompreco.com.br</a>
+                    </p>
+                </address>
+            </div>
+        </div>
+    </footer>
     
-    
+    <script src="assets/js/carousel-script.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
 </body>
+
 </html>

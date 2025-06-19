@@ -5,160 +5,448 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minimercado Preço Baixo</title>
-    <link rel="shortcut icon" href="img/logo.png">
-    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/img/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
 
 </head>
 
-<body>
-    <header>
-        <div class="mercado">
-            <img src="img/logo.png" alt="Logo do MiniMercado" class="mercado-logo" width="20px" height="20px">
-            <div class="mercado-nome">
-                <p class="mercado-pri-nome">MiniMercado</p>
-                <p class="mercado-seg-nome">Preço Baixo</p>
+<body class="bg-body-tertiary">
+    <!--=============CABEÇALHO ======================-->
+    <header class="bg-success border-bottom shadow-sm">
+        <div class="container py-2 d-flex align-items-center justify-content-between flex-wrap">
+            <a href="index.html" class="d-flex align-items-center text-decoration-none">
+                <img src="assets/img/logo.png" alt="Logo do MiniMercado" class="img-fluid me-2" style="max-height: 50px;">
+                <h1 class="fs-5 fw-bold text-white mb-0">Preço Baixo</h1>
+            </a>
+            <!--Barra de busca de produtos-->
+            <form class="d-none d-md-flex flex-grow-1 mx-4" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar produtos..."
+                    aria-label="Buscar produtos">
+                <button class="btn btn-light" type="submit">Buscar</button>
+            </form>
+
+            <div class="d-flex align-items-center gap-3 mt-2 mt-md-0">
+                <a href="carrinho.html" class="btn btn-outline-light position-relative d-flex align-items-center">
+                    <img src="assets/img/carrinho.png" alt="Ícone de carrinho de compras" width="20" height="20"> <span
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        2
+                    </span>
+                </a>
+                <!--Login usuário-->
+                <a href="login.html" class="btn btn-outline-light d-flex align-items-center">
+                    <img src="assets/img/entrar-avatar.png" alt="Ícone de perfil de usuário para login" width="20" height="20">
+                </a>
             </div>
         </div>
-        <div class="pesquisar-produto">
-            <input type="search" class="pesquisa" name="pesquisa" list="opcoes-produtos" placeholder="Buscar produtos...">
-            <datalist id="opcoes-produtos">
-                <option value="Água Sanitária Super Candida 5lt">
-                <option value="Arroz Tipo 01 Tio João 2kg">
-                <option value="Banana Prata Del Norte 1kg">
-                <option value="Batata Inglesa Comum 1Kg">
-                <option value="Feijão Carioca Camil 1Kg">
-                <option value="Papel Higiênico Folha Dupla 30m Leve 16 Pague 15 Mimmo">
-            </datalist>
-        </div>
-        <nav>
-            <a href="index.html#corpo">Produtos</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="#rodape">Mais</a>
-            <a href="carrinho.html"><img src="img/carrinho.png" alt="Carrinho de compras" width="20px" height="20px"></a>
-            <a href="login.html"><img src="img/entrar-avatar.png" alt="Login" width="20px" height="20px"></a>
-        </nav>
+        <!--Links de naveção,nprodutos sobre, serviços e contatos-->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html#produtos-destaque" onclick="ativar(this)">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre.html" onclick="ativar(this)">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#servicos" onclick="ativar(this)">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contatos" onclick="ativar(this)">Contatos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav> 
     </header>
-    <main id="corpo">
-        <section>
-            <h3 class="categoria">Frutas e Verduras</h3>
-            <div class="produtos">
-                <article class="produto">
-                    <img src="img/banana.png" alt="Banana Prata Del Norte">
-                    <p>Banana Prata Del Norte 1kg</p>
-                    <h3 class="produto-valor">R$ 5,99</h3>
-                    <div class="produto-qtd">
-                        <button type="button" class="btn-menos">-</button>
-                        <input type="number" min="1" value="1" readonly>
-                        <button type="button" class="btn-mais">+</button>
-                    </div>
-                    <button class="produto-add" type="button">Adicionar ao carrinho</button>
-                </article>
 
-                <article class="produto">
-                    <img src="img/batata_inglesa.png" alt="Batata Inglesa Comum">
-                    <p>Batata Inglesa Comum 1Kg</p>
-                    <h3 class="produto-valor">R$ 4,99</h3>
-                    <div class="produto-qtd">
-                        <button type="button" class="btn-menos">-</button>
-                        <input type="number" min="1" value="1" readonly>
-                        <button type="button" class="btn-mais">+</button>
+    <!--=============Corpo, contém seções de produtos, serviços e fomulario de 
+        cadatastro ======================-->
+    <main>
+        <div class="container p-3">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+
+                <div class="carousel-inner text-center">
+                    <div class="carousel-item active">
+                        <img src="assets/img/oferta_frutas.png" class="d-block mx-auto img-fluid" style="max-width: 300px;"
+                            alt="Oferta de Batata Inglesa fresca">
                     </div>
-                    <button class="produto-add" type="button">Adicionar ao carrinho</button>
+                    <div class="carousel-item">
+                        <img src="assets/img/oferta.png" class="d-block mx-auto img-fluid" style="max-width: 300px;"
+                            alt="Oferta de Arroz Tio João em pacote">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/oferta_pao.png" class="d-block mx-auto img-fluid" style="max-width: 300px;"
+                            alt="Oferta de Pães fresquinhos em promoção">
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+            </div>
+        </div>
+    <!--Seção Frutas e verduras-->
+        <section id="produtos-destaque" class="container w-75 mx-auto my-4 p-4 rounded bg-success shadow-sm">
+            <h2 class="display-5 fw-bold mb-4 text-white">Frutas e Verduras</h2>
+            <hr class="my-4">
+            <div class="row g-4 justify-content-center">
+                <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+                    <div class="p-3 border rounded bg-white h-100 d-flex flex-column justify-content-between shadow-sm">
+                        <img src="assets/img/banana.png" class="rounded mx-auto d-block img-fluid mb-3"
+                            alt="Cacho de Banana Prata Del Norte 1kg" style="max-height: 150px;">
+                        <h5 class="mb-2">Banana Prata Del Norte 1kg</h5>
+                        <p class="text-success fw-bold mb-3">R$ 5,99</p>
+                        <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
+                            <button type="button" class="btn btn-outline-secondary btn-sm px-3 btn-menos"
+                                aria-label="Diminuir quantidade de Banana Prata">-</button> <input type="number"
+                                value="1" min="1" class="form-control form-control-sm text-center input-qtd"
+                                style="width: 60px;" aria-label="Quantidade de Banana Prata"> <button type="button"
+                                class="btn btn-outline-secondary btn-sm px-3 btn-mais"
+                                aria-label="Aumentar quantidade de Banana Prata">+</button>
+                        </div>
+                        <button class="btn btn-primary btn-sm w-100" type="button">
+                            <i class="bi bi-cart-plus me-1"></i> Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+                <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+                    <div class="p-3 border rounded bg-white h-100 d-flex flex-column justify-content-between shadow-sm">
+                        <img src="assets/img/batata_inglesa.png" class="rounded mx-auto d-block img-fluid mb-3"
+                            alt="Saco de Batata Inglesa Comum 1kg" style="max-height: 150px;">
+                        <h5 class="mb-2">Batata Inglesa Comum 1kg</h5>
+                        <p class="text-success fw-bold mb-3">R$ 4,99</p>
+                        <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
+                            <button type="button" class="btn btn-outline-secondary btn-sm px-3 btn-menos"
+                                aria-label="Diminuir quantidade de Batata Inglesa">-</button> <input type="number"
+                                value="1" min="1" class="form-control form-control-sm text-center input-qtd"
+                                style="width: 60px;" aria-label="Quantidade de Batata Inglesa"> <button type="button"
+                                class="btn btn-outline-secondary btn-sm px-3 btn-mais"
+                                aria-label="Aumentar quantidade de Batata Inglesa">+</button>
+                        </div>
+                        <button class="btn btn-primary btn-sm w-100" type="button">
+                            <i class="bi bi-cart-plus me-1"></i> Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!--Seção alimenetos não perecciveis-->
+        <section class="container w-75 mx-auto my-4 p-4 rounded bg-success shadow-sm">
+            <h2 class="display-5 fw-bold mb-4 text-white">Alimentos Não Perecíveis</h2>
+            <hr class="my-4">
+            <div class="row g-4 justify-content-center">
+                <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+                    <div class="p-3 border rounded bg-white h-100 d-flex flex-column justify-content-between shadow-sm">
+                        <img src="assets/img/arroz_tipo1_tio_joao.png" alt="Pacote de Arroz Tipo 01 Tio João 2kg"
+                            class="rounded mx-auto d-block img-fluid mb-3" style="max-height: 150px;">
+                        <h5 class="mb-2">Arroz Tipo 01 Tio João 2kg</h5>
+                        <p class="text-success fw-bold mb-3">R$ 11,99</p>
+                        <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
+                            <button type="button" class="btn btn-outline-secondary btn-sm px-3 btn-menos"
+                                aria-label="Diminuir quantidade de Arroz Tio João">-</button> <input type="number"
+                                value="1" min="1" class="form-control form-control-sm text-center input-qtd"
+                                style="width: 60px;" aria-label="Quantidade de Arroz Tio João"> <button type="button"
+                                class="btn btn-outline-secondary btn-sm px-3 btn-mais"
+                                aria-label="Aumentar quantidade de Arroz Tio João">+</button>
+                        </div>
+                        <button class="btn btn-primary btn-sm w-100" type="button">
+                            <i class="bi bi-cart-plus me-1"></i> Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+                <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+                    <div class="p-3 border rounded bg-white h-100 d-flex flex-column justify-content-between shadow-sm">
+                        <img src="assets/img/feijao_carioca_camil.png" alt="Pacote de Feijão Carioca Camil 1Kg"
+                            class="rounded mx-auto d-block img-fluid mb-3" style="max-height: 150px;">
+                        <h5 class="mb-2">Feijão Carioca Camil 1Kg</h5>
+                        <p class="text-success fw-bold mb-3">R$ 5,97</p>
+                        <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
+                            <button type="button" class="btn btn-outline-secondary btn-sm px-3 btn-menos"
+                                aria-label="Diminuir quantidade de Feijão Carioca">-</button> <input type="number"
+                                value="1" min="1" class="form-control form-control-sm text-center input-qtd"
+                                style="width: 60px;" aria-label="Quantidade de Feijão Carioca"> <button type="button"
+                                class="btn btn-outline-secondary btn-sm px-3 btn-mais"
+                                aria-label="Aumentar quantidade de Feijão Carioca">+</button>
+                        </div>
+                        <button class="btn btn-primary btn-sm w-100" type="button">
+                            <i class="bi bi-cart-plus me-1"></i> Adicionar ao carrinho
+                        </button>
+                    </div>
                 </article>
             </div>
         </section>
 
-        <section>
-            <h3 class="categoria">Alimentos Não Perecíveis</h3>
-            <div class="produtos">
-                <article class="produto">
-                    <img src="img/arroz_tipo1_tio_joao.png" alt="Arroz Tipo 01 Tio João 2kg">
-                    <p>Arroz Tipo 01 Tio João 2kg</p>
-                    <h3 class="produto-valor">R$ 11,99</h3>
-                    <div class="produto-qtd">
-                        <button type="button" class="btn-menos">-</button>
-                        <input type="number" min="1" value="1" readonly>
-                        <button type="button" class="btn-mais">+</button>
+        <!--Seção Higiene e Limpeza-->
+        <section class="container w-75 mx-auto my-4 p-4 rounded bg-success shadow-sm">
+            <h2 class="display-5 fw-bold mb-4 text-white">Higiene e Limpeza</h2>
+            <hr class="my-4">
+            <div class="row g-4 justify-content-center">
+                <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+                    <div class="p-3 border rounded bg-white h-100 d-flex flex-column justify-content-between shadow-sm">
+                        <img src="assets/img/agua_sanitaria_candida.png" alt="Garrafa de Água Sanitária Super Candida 5 litros"
+                            class="rounded mx-auto d-block img-fluid mb-3" style="max-height: 150px;">
+                        <h5 class="mb-2">Água Sanitária Super Candida 5lt</h5>
+                        <p class="text-success fw-bold mb-3">R$ 11,99</p>
+                        <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
+                            <button type="button" class="btn btn-outline-secondary btn-sm px-3 btn-menos"
+                                aria-label="Diminuir quantidade de Água Sanitária">-</button> <input type="number"
+                                value="1" min="1" class="form-control form-control-sm text-center input-qtd"
+                                style="width: 60px;" aria-label="Quantidade de Água Sanitária"> <button type="button"
+                                class="btn btn-outline-secondary btn-sm px-3 btn-mais"
+                                aria-label="Aumentar quantidade de Água Sanitária">+</button>
+                        </div>
+                        <button class="btn btn-primary btn-sm w-100" type="button">
+                            <i class="bi bi-cart-plus me-1"></i> Adicionar ao carrinho
+                        </button>
                     </div>
-                    <button class="produto-add" type="button">Adicionar ao carrinho</button>
+                </article>
+                <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+                    <div class="p-3 border rounded bg-white h-100 d-flex flex-column justify-content-between shadow-sm">
+                        <img src="assets/img/papel_higienico_mimmo.png"
+                            alt="Pacote de Papel Higiênico Folha Dupla Mimmo com 16 rolos"
+                            class="rounded mx-auto d-block img-fluid mb-3" style="max-height: 150px;">
+                        <h5 class="mb-2">Papel Higiênico Folha Dupla 30m Leve 16 Pague 15 Mimmo</h5>
+                        <p class="text-success fw-bold mb-3">R$ 26,49</p>
+                        <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
+                            <button type="button" class="btn btn-outline-secondary btn-sm px-3 btn-menos"
+                                aria-label="Diminuir quantidade de Papel Higiênico">-</button> <input type="number"
+                                value="1" min="1" class="form-control form-control-sm text-center input-qtd"
+                                style="width: 60px;" aria-label="Quantidade de Papel Higiênico"> <button type="button"
+                                class="btn btn-outline-secondary btn-sm px-3 btn-mais"
+                                aria-label="Aumentar quantidade de Papel Higiênico">+</button>
+                        </div>
+                        <button class="btn btn-primary btn-sm w-100" type="button">
+                            <i class="bi bi-cart-plus me-1"></i> Adicionar ao carrinho
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!--Seção serviços Oferecidos-->
+        <section id="servicos" class="container text-center my-5">
+            <h2 class="mb-4">Serviços Oferecidos</h2>
+            <div class="row justify-content-center">
+                <article class="col-md-5 m-3 p-4 bg-primary bg-opacity-10 rounded-3 shadow-sm">
+                    <img src="assets/img/mercado-icone.png" alt="Ícone ilustrando retirada de compras no local"
+                        class="img-fluid mb-3" style="height: 100px;">
+                    <h3 class="text-primary">Retirada no local</h3>
+                    <p class="text-muted">Compre online e retire no local com rapidez e praticidade. Sem filas, sem
+                        espera!</p>
+                    <a href="#" class="btn btn-outline-primary mt-2">Saiba mais</a>
                 </article>
 
-                <article class="produto">
-                    <img src="img/feijao_carioca_camil.png" alt="Feijão Carioca Camil 1Kg">
-                    <p>Feijão Carioca Camil 1Kg</p>
-                    <h3 class="produto-valor">R$ 5,97</h3>
-                    <div class="produto-qtd">
-                        <button type="button" class="btn-menos">-</button>
-                        <input type="number" min="1" value="1" readonly>
-                        <button type="button" class="btn-mais">+</button>
-                    </div>
-                    <button class="produto-add" type="button">Adicionar ao carrinho</button>
+                <article class="col-md-5 m-3 p-4 bg-primary bg-opacity-10 rounded-3 shadow-sm">
+                    <img src="assets/img/caixa-entrega.png" alt="Ícone de caixa com setas, representando tele-entrega"
+                        class="img-fluid mb-3" style="height: 100px;">
+                    <h3 class="text-primary">Tele-Entrega</h3>
+                    <p class="text-muted">Entrega rápida e segura de produtos no conforto da sua casa. Peça online e
+                        receba onde estiver!</p>
+                    <a href="#" class="btn btn-outline-primary mt-2">Saiba mais</a>
                 </article>
-
             </div>
         </section>
 
-        <section>
+        <!--Formulario de Cadastro-->
+        <div class="container my-5">
+            <div class="card shadow-lg">
+                <div class="card-header bg-success text-white">
+                    <h2 class="mb-0">Formulário de Cadastro</h2>
+                </div>
+                <div class="card-body">
+                    <form class="needs-validation" action="" method="post" novalidate>
+                        <fieldset class="mb-4">
+                            <legend class="h5 mb-3">Informações Pessoais</legend>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="inputNome" class="form-label">Nome</label>
+                                    <input type="text" id="inputNome" name="nome" class="form-control"
+                                        placeholder="Nome" required>
+                                    <div class="invalid-feedback">
+                                        Por favor, insira seu nome.
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputSobrenome" class="form-label">Sobrenome</label>
+                                    <input type="text" id="inputSobrenome" name="sobrenome" class="form-control"
+                                        placeholder="Sobrenome" required>
+                                    <div class="invalid-feedback">
+                                        Por favor, insira seu sobrenome.
+                                    </div>
+                                </div>
+                            </div>
 
-            <h3 class="categoria">Higiene e Limpeza</h3>
-            <div class="produtos">
-                <article class="produto">
-                    <img src="img/agua_sanitaria_candida.png" alt="Água Sanitária Super Candida 5lt">
-                    <p>Água Sanitária Super Candida 5lt</p>
-                    <h3 class="produto-valor">R$ 11,99</h3>
-                    <div class="produto-qtd">
-                        <button type="button" class="btn-menos">-</button>
-                        <input type="number" min="1" value="1" readonly>
-                        <button type="button" class="btn-mais">+</button>
-                    </div>
-                    <button class="produto-add" type="button">Adicionar ao carrinho</button>
-                </article>
+                            <div class="row g-3 mt-2">
+                                <div class="col-md-6">
+                                    <label for="inputCPF" class="form-label">CPF</label>
+                                    <input type="text" id="inputCPF" name="cpf" class="form-control"
+                                        placeholder="00000000000" pattern="\d{11}" required>
+                                    <div class="invalid-feedback">
+                                        Por favor, insira um CPF válido com 11 números.
+                                    </div>
+                                </div>
 
-                <article class="produto">
-                    <img src="img/papel_higienico_mimmo.png"
-                        alt="Papel Higiênico Folha Dupla 30m Leve 16 Pague 15 Mimmo">
-                    <p>Papel Higiênico Folha Dupla 30m Leve 16 Pague 15 Mimmo</p>
-                    <h3 class="produto-valor">R$ 26,49</h3>
-                    <div class="produto-qtd">
-                        <button type="button" class="btn-menos">-</button>
-                        <input type="number" min="1" value="1" readonly>
-                        <button type="button" class="btn-mais">+</button>
-                    </div>
-                    <button class="produto-add" type="button">Adicionar ao carrinho</button>
-                </article>
+                                <div class="col-md-6">
+                                    <label class="form-label d-block">Sexo</label>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="sexo" id="sexoM" value="M"
+                                            checked>
+                                        <label class="form-check-label" for="sexoM">Masculino</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="sexo" id="sexoF" value="F">
+                                        <label class="form-check-label" for="sexoF">Feminino</label>
+                                    </div>
+                                </div>
+                            </div>
 
+                            <div class="row g-3 mt-2">
+                                <div class="col-md-6">
+                                    <label for="inputEmail" class="form-label" required>Email</label>
+                                    <input type="email" id="inputEmail" name="email" class="form-control"
+                                        placeholder="email@email.com" required>
+                                    <div class="invalid-feedback">
+                                        Por favor, insira um email válido.
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputTelefone" class="form-label" required>Telefone</label>
+                                    <input type="tel" id="inputTelefone" name="telefone" class="form-control"
+                                        placeholder="11999999999" pattern="\d{10,11}" maxlength="11" required>
+                                    <div class="invalid-feedback">
+                                        Por favor, insira um telefone válido (10 ou 11 dígitos).
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr>
+                            <!--Escolha do serviço-->
+                            <h3 class="mb-3">Agendamento de Entrega ou Retirada</h3>
+                            <div class="mb-3">
+                                <label for="servico" class="form-label">Escolha o serviço:</label>
+                                <select id="servico" name="servico" class="form-select" required>
+                                    <option value="">Selecione</option>
+                                    <option value="retirada">Retirada no local</option>
+                                    <option value="entrega">Tele-entrega</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="data" class="form-label">Data do agendamento:</label>
+                                <input type="date" id="data" name="data" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="horario" class="form-label">Horário do agendamento:</label>
+                                <input type="time" id="horario" name="horario" class="form-control" required>
+                        </fieldset>
+                        <!--Informações e endereço-->
+                        <fieldset>
+                            <legend class="h5 mb-3">Informações de Endereço</legend>
+                            <div class="row g-3">
+                                <div class="col-md-8">
+                                    <label for="inputEndereco" class="form-label">Endereço</label>
+                                    <input type="text" id="inputEndereco" name="endereco" class="form-control"
+                                        placeholder="Rua, número, bairro" required>
+                                    <div class="invalid-feedback">
+                                        Por favor, insira seu endereço.
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="inputComplemento" class="form-label">Complemento</label>
+                                    <input type="text" id="inputComplemento" name="complemento" class="form-control"
+                                        placeholder="Apartamento, bloco, etc.">
+                                </div>
+                            </div>
+
+                            <div class="row g-3 mt-2">
+                                <div class="col-md-6">
+                                    <label for="inputCidade" class="form-label">Cidade</label>
+                                    <input type="text" id="inputCidade" name="cidade" class="form-control"
+                                        placeholder="Cidade" required>
+                                    <div class="invalid-feedback">
+                                        Por favor, insira sua cidade.
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="inputEstado" class="form-label">Estado</label>
+                                    <select id="inputEstado" name="estado" class="form-select" required>
+                                        <option value="" selected disabled>Selecione</option>
+                                        <option value="PR">PR</option>
+                                        <option value="SC">SC</option>
+                                        <option value="RS">RS</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Por favor, selecione um estado.
+                                    </div>
+                                </div>
+                                <div class="col-md-3 d-flex align-items-end">
+                                    <button type="submit" class="btn btn-primary w-100" data-link>Enviar</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
             </div>
-        </section>
-
-        <article>
-            <h2>Serviços Oferecidos</h2>
-            <span>Retiarada no local</span>
-            <br>
-            <span>Tele-entrega</span>
-            
-        </article>
+        </div>
     </main>
-    <hr>
 
-    <footer id="rodape">
-        <div>
-            <h3>Autoria</h3>
-            <p>Desenvolvido por Marcelo Bernardo de Miranda</p>
-            <p>&copy; 2025 MiniMercado Preço Baixo</p>
+    <!--Rodapé com as informações de contato, autoria e paginas de acesso-->
+    <hr class="my-4">
+    <footer id="contatos" class="container-fluid p-5 my-3 text-center bg-success" role="contentinfo">
+        <div class="row">
+            <div class="col-md-4 mb-3 text-white">
+                <h3>Autoria</h3>
+                <p>Desenvolvido por Marcelo Bernardo de Miranda</p>
+                <p>&copy; 2025 MiniMercado Preço Baixo</p>
+            </div>
+            <div class="col-md-4 mb-3 text-white">
+                <h3>Páginas</h3>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html#produtos-destaque">Produtos</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-white" href="sobre.html">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="login.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-3 text-white">
+                <h3>Dados de Contato</h3>
+                <address>
+                    <p><a class="text-white" href="tel:08009874721">0800 987 4721</a></p>
+                    <p><a class="text-white"
+                            href="mailto:bomprec@bompreco.com.br?subject=Faça%20seu%20pedido">bomprec@bompreco.com.br</a>
+                    </p>
+                </address>
+            </div>
         </div>
-        <div>
-            <h3>Páginas</h3>
-            <a href="index.html">Produtos</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="login.html">Login</a>
-        </div>
-        <address>
-            <h3>Dados de Contato</h3>
-            <a href="tel:0800 987 4721">0800 987 4721</a>
-            <a href="mailto:bomprec@marcelo.com.br?subjetc='Faça seu pedido'">bomprec@bompreco.com.br</a>
-        </address>
     </footer>
 
-</body>
+    <script src="assets/js/carousel-script.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"crossorigin="anonymous"></script>
 
+</body>
 </html>

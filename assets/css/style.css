@@ -1,0 +1,132 @@
+/* ======== GERAL ======== */
+body {
+    background-color: #fff8e1;
+    /* Bege claro */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+/* ======== HEADER / LOGO ======== */
+header {
+    background-color: #28a745 !important;
+    /* Verde Bootstrap */
+    border-bottom: 3px solid #1e7e34;
+}
+
+header h1 {
+    color: #fff !important;
+}
+
+header img {
+    max-height: 50px;
+}
+
+/* ======== BARRA DE BUSCA ======== */
+form[role="search"] input {
+    border-radius: 30px;
+    padding-left: 20px;
+}
+
+form[role="search"] button {
+    border-radius: 30px;
+}
+
+/* ======== NAVBAR ======== */
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: #555 !important;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+    background-color: #ffc107 !important;
+    color: #212529 !important;
+    border-radius: 5px;
+}
+
+/* ======== MAIN / SOBRE ======== */
+main h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #1e7e34;
+}
+
+main h3 {
+    color: #343a40;
+    border-left: 4px solid #28a745;
+    padding-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+/* ======== CARDS - MISSÃO, VISÃO, VALORES ======== */
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card-title {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.card-text,
+.card .list-unstyled li {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.card .list-unstyled li::before {
+    content: "✔ ";
+    color: #28a745;
+}
+
+/* ======== RODAPÉ ======== */
+footer {
+    background-color: #28a745;
+    color: #fff;
+}
+
+footer h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+footer a {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ======== BOTÕES DO HEADER (CARRINHO, LOGIN) ======== */
+.btn-outline-light {
+    border-color: #fff;
+    color: #fff;
+}
+
+.btn-outline-light:hover {
+    background-color: #fff;
+    color: #28a745;
+}
+
+/* ======== RESPONSIVIDADE EXTRA ======== */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-nav .nav-link {
+        text-align: center;
+        margin: 5px 0;
+    }
+}

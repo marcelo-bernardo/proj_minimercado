@@ -1,83 +1,45 @@
-<!--<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Minimercado Preço Baixo</title>
-    <link rel="shortcut icon" href="/img/logo.png">
-
-    <link rel="stylesheet" href="/style/header.css">
-    <link rel="stylesheet" href="/style/body_login.css">
-    <link rel="stylesheet" href="/style/footer.css">
+    <link rel="shortcut icon" href="assets/img/logo.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous" />
 </head>
 
-<body>
-    <header>
-        <div class="mercado">
-            <img src="img/logo.png" alt="Logo do MiniMercado" class="mercado-logo" width="20px" height="20px">
-            <div class="mercado-nome">
-                <p class="mercado-pri-nome">MiniMercado</p>
-                <p class="mercado-seg-nome">Preço Baixo</p>
+<body class="d-flex justify-content-center align-items-center vh-100 text-light" style="background-color:#22711960;">
+    <div class="card p-4 text-center"
+        style="width: 100%; max-width: 400px; background-color: #2F2F2F; color: #DCDCDC; ">
+        <form action="" method="post">
+            <img src="assets/img/logo.png" alt="Logo do MiniMercado" width="80" height="80" title="&copy; MiniMercado" />
+            <h3 class="mb-4 mt-3" style="font-weight: 700; word-spacing: 10px; letter-spacing: 3px;">Login</h3>
+            <div class="mb-3 text-start">
+                <input type="text" name="user" class="form-control" placeholder="Digite usuário" required
+                    maxlength="80" />
             </div>
-        </div>
-        <div class="pesquisar-produto">
-            <input type="search" class="pesquisa" name="pesquisa" list="opcoes-produtos" placeholder="Buscar produtos...">
-            <datalist id="opcoes-produtos">
-                <option value="Água Sanitária Super Candida 5lt">
-                <option value="Arroz Tipo 01 Tio João 2kg">
-                <option value="Banana Prata Del Norte 1kg">
-                <option value="Batata Inglesa Comum 1Kg">
-                <option value="Feijão Carioca Camil 1Kg">
-                <option value="Papel Higiênico Folha Dupla 30m Leve 16 Pague 15 Mimmo">
-            </datalist>
-        </div>
-        <nav>
-            <a href="index.html#corpo">Produtos</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="#rodape">Mais</a>
-            <a href="carrinho.html"><img src="img/carrinho.png" alt="Carrinho de compras" width="20px" height="20px"></a>
-            <a href="login.html"><img src="img/entrar-avatar.png" alt="Login" width="20px" height="20px"></a>
-        </nav>
-    </header>
-    <label for="senha "></label>
-
-    <main id="login">
-        <section>
-            <h3 class="login_title">Login</h3>
-            <div class="login_div">
-                <h3 class="login_text">Usuário</h3>
-                <input type="text" class="login_input">
-                <h3 class="login_text">Senha</h3>
-                <input type="password" class="login_input">
-                <button type="button" class="btn-logar">Entrar</button>
-                <a href="/paginas/nova_conta.html" class="login_criar_conta">Criar conta agora!</a>
+            <div class="mb-3 text-start">
+                <input type="password" name="password" class="form-control" placeholder="Digite sua senha" required
+                    maxlength="45" />
             </div>
-        </section>
+            <input type="submit" value="Entrar" class="btn btn-primary w-100 mb-2" />
+            <div class="mt-2">
+                <small class="text-light">Primeiro acesso?</small><br />
+                <a href="/paginas/nova_conta.html" class="btn btn-outline-light btn-sm mt-1 w-100">
+                    Criar conta
+                </a>
+            </div>
+        </form>
+    </div>
 
-    </main>
-    <hr>
-
-    <footer id="rodape">
-        <div>
-            <h3>Autoria</h3>
-            <p>Desenvolvido por Marcelo Bernardo de Miranda</p>
-            <p>&copy; 2025 MiniMercado Preço Baixo</p>
-        </div>
-        <div>
-            <h3>Páginas</h3>
-            <a href="/index.html">Produtos</a>
-            <a href="/paginas/sobre.html">Sobre</a>
-            <a href="/paginas/login.html">Login</a>
-        </div>
-        <address>
-            <h3>Dados de Contato</h3>
-            <a href="tel:0800 987 4721">0800 987 4721</a>
-            <a href="mailto:bomprec@marcelo.com.br">bomprec@marcelo.com.br</a>
-        </address>
-    </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
+        integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
--->
